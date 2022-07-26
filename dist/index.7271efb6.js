@@ -2983,7 +2983,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom":"j6uA9","react-router-dom":"fdOAw","./SearchParams":"gR5jP","./Details":"aUpxx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ThemeContext":"4b9qW","react":"21dqq"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","react-router-dom":"fdOAw","./SearchParams":"gR5jP","./Details":"aUpxx","./ThemeContext":"4b9qW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -26364,7 +26364,7 @@ const SearchParams = ()=>{
     const [breed1, setBreed] = (0, _react.useState)("");
     const [breeds] = (0, _useBreedListDefault.default)(animal1);
     const [pets, setPets] = (0, _react.useState)([]);
-    const [theme] = (0, _react.useContext)((0, _themeContextDefault.default));
+    const [theme, setTheme] = (0, _react.useContext)((0, _themeContextDefault.default));
     (0, _react.useEffect)(()=>{
         requestPets();
     }, []); //eslint-disable-line react-hooks/exhaustive-deps
@@ -26482,6 +26482,66 @@ const SearchParams = ()=>{
                         lineNumber: 50,
                         columnNumber: 9
                     }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                        htmlFor: "theme",
+                        children: [
+                            "theme",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                value: theme,
+                                onChange: (e)=>setTheme(e.target.value),
+                                onBlur: (e)=>setTheme(e.target.value),
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: ""
+                                    }, void 0, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 66,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "peru",
+                                        children: "peru"
+                                    }, void 0, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 67,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "green",
+                                        children: "green"
+                                    }, void 0, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 68,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "pink",
+                                        children: "pink"
+                                    }, void 0, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 69,
+                                        columnNumber: 13
+                                    }, undefined),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                        value: "mediumorchid",
+                                        children: "orchid"
+                                    }, void 0, false, {
+                                        fileName: "src/SearchParams.js",
+                                        lineNumber: 70,
+                                        columnNumber: 13
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/SearchParams.js",
+                                lineNumber: 65,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/SearchParams.js",
+                        lineNumber: 63,
+                        columnNumber: 9
+                    }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         style: {
                             backgroundColor: theme
@@ -26489,7 +26549,7 @@ const SearchParams = ()=>{
                         children: "Submit"
                     }, void 0, false, {
                         fileName: "src/SearchParams.js",
-                        lineNumber: 63,
+                        lineNumber: 73,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -26502,7 +26562,7 @@ const SearchParams = ()=>{
                 pets: pets
             }, void 0, false, {
                 fileName: "src/SearchParams.js",
-                lineNumber: 67,
+                lineNumber: 77,
                 columnNumber: 7
             }, undefined)
         ]
@@ -26512,7 +26572,7 @@ const SearchParams = ()=>{
         columnNumber: 10
     }, undefined);
 };
-_s(SearchParams, "N+2fabvokCMhGmwM8iomvTlF3lc=", false, function() {
+_s(SearchParams, "Pw6T+fIFEZX6EnZwVFTlv0d68Jw=", false, function() {
     return [
         (0, _useBreedListDefault.default)
     ];
@@ -26527,7 +26587,7 @@ $RefreshReg$(_c, "SearchParams");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./useBreedList":"9NpcM","./Results":"6w7nu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ThemeContext":"4b9qW"}],"9NpcM":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./useBreedList":"9NpcM","./Results":"6w7nu","./ThemeContext":"4b9qW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9NpcM":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2adc = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26862,6 +26922,8 @@ var _carousel = require("./Carousel");
 var _carouselDefault = parcelHelpers.interopDefault(_carousel);
 var _errorBoundary = require("./ErrorBoundary");
 var _errorBoundaryDefault = parcelHelpers.interopDefault(_errorBoundary);
+var _themeContext = require("./ThemeContext");
+var _themeContextDefault = parcelHelpers.interopDefault(_themeContext);
 var _s = $RefreshSig$();
 function _defineProperty(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
@@ -26893,7 +26955,7 @@ class Details extends (0, _react.Component) {
             children: "Loading....."
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 37,
+            lineNumber: 38,
             columnNumber: 14
         }, this);
          //throw new Error("Self made Error");
@@ -26905,7 +26967,7 @@ class Details extends (0, _react.Component) {
                     images: images
                 }, void 0, false, {
                     fileName: "src/Details.js",
-                    lineNumber: 49,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -26914,7 +26976,7 @@ class Details extends (0, _react.Component) {
                             children: name
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 51,
+                            lineNumber: 52,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
@@ -26925,36 +26987,39 @@ class Details extends (0, _react.Component) {
                             ]
                         }, void 0, true, {
                             fileName: "src/Details.js",
-                            lineNumber: 52,
+                            lineNumber: 53,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                            style: {
+                                backgroundColor: this.props.theme
+                            },
                             children: [
                                 "Adopt ",
                                 name
                             ]
                         }, void 0, true, {
                             fileName: "src/Details.js",
-                            lineNumber: 55,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                             children: description
                         }, void 0, false, {
                             fileName: "src/Details.js",
-                            lineNumber: 56,
+                            lineNumber: 61,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/Details.js",
-                    lineNumber: 50,
+                    lineNumber: 51,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/Details.js",
-            lineNumber: 48,
+            lineNumber: 49,
             columnNumber: 12
         }, this);
     }
@@ -26962,24 +27027,26 @@ class Details extends (0, _react.Component) {
 const WrappedDetails = ()=>{
     _s();
     const params = (0, _reactRouterDom.useParams)();
+    const [theme] = (0, _react.useContext)((0, _themeContextDefault.default));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorBoundaryDefault.default), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Details, {
+                theme: theme,
                 params: params
             }, void 0, false, {
                 fileName: "src/Details.js",
-                lineNumber: 66,
+                lineNumber: 72,
                 columnNumber: 7
             }, undefined),
             ";"
         ]
     }, void 0, true, {
         fileName: "src/Details.js",
-        lineNumber: 65,
+        lineNumber: 71,
         columnNumber: 10
     }, undefined);
 };
-_s(WrappedDetails, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
+_s(WrappedDetails, "+t+TC0C4iPfRyS1CwVD+xUugviM=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
@@ -26994,7 +27061,7 @@ $RefreshReg$(_c, "WrappedDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./Carousel":"1lXBA","./ErrorBoundary":"dNDjy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1lXBA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./Carousel":"1lXBA","./ErrorBoundary":"dNDjy","./ThemeContext":"4b9qW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1lXBA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9e23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

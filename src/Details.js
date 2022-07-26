@@ -8,10 +8,11 @@ const Details = () => {
 export default Details;
  */
 
-import { Component } from "react";
+import { Component, useContext } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
+import ThemeContext from "./ThemeContext";
 
 class Details extends Component {
   /* constructor(props) {
@@ -28,7 +29,6 @@ class Details extends Component {
 
     this.setState({ loading: false, ...json.pets[0] });
   }
-
   render() {
     if (this.state.loading) {
       return <h1>Loading.....</h1>;
@@ -44,7 +44,9 @@ class Details extends Component {
           <h2>
             {animal}-{breed}
           </h2>
-          <button>Adopt {name}</button>
+          <button style={{ backgroundColor: this.props.theme }}>
+            Adopt {name}
+          </button>
           <p>{description}</p>
         </div>
       </div>
@@ -54,9 +56,10 @@ class Details extends Component {
 
 const WrappedDetails = () => {
   const params = useParams();
+  const [theme] = useContext(ThemeContext);
   return (
     <ErrorBoundary>
-      <Details params={params} />;
+      <Details theme={theme} params={params} />;
     </ErrorBoundary>
   );
 };
