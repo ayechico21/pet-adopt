@@ -11,6 +11,8 @@ export default Details;
 import { Component } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
+import ErrorBoundary from "./ErrorBoundary";
+
 class Details extends Component {
   /* constructor(props) {
     super(props);
@@ -31,7 +33,7 @@ class Details extends Component {
     if (this.state.loading) {
       return <h1>Loading.....</h1>;
     }
-
+    throw new Error("Self made Error");
     const { name, animal, breed, description, images } = this.state;
 
     return (
@@ -52,7 +54,11 @@ class Details extends Component {
 
 const WrappedDetails = () => {
   const params = useParams();
-  return <Details params={params} />;
+  return (
+    <ErrorBoundary>
+      <Details params={params} />;
+    </ErrorBoundary>
+  );
 };
 
 export default WrappedDetails;

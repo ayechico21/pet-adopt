@@ -26819,6 +26819,8 @@ export default Details;
 var _reactRouterDom = require("react-router-dom");
 var _carousel = require("./Carousel");
 var _carouselDefault = parcelHelpers.interopDefault(_carousel);
+var _errorBoundary = require("./ErrorBoundary");
+var _errorBoundaryDefault = parcelHelpers.interopDefault(_errorBoundary);
 var _s = $RefreshSig$();
 function _defineProperty(obj, key, value) {
     if (key in obj) Object.defineProperty(obj, key, {
@@ -26850,79 +26852,29 @@ class Details extends (0, _react.Component) {
             children: "Loading....."
         }, void 0, false, {
             fileName: "src/Details.js",
-            lineNumber: 36,
+            lineNumber: 37,
             columnNumber: 14
         }, this);
-        const { name , animal , breed , description , images  } = this.state;
-        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "details",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselDefault.default), {
-                    images: images
-                }, void 0, false, {
-                    fileName: "src/Details.js",
-                    lineNumber: 47,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                            children: name
-                        }, void 0, false, {
-                            fileName: "src/Details.js",
-                            lineNumber: 49,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            children: [
-                                animal,
-                                "-",
-                                breed
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/Details.js",
-                            lineNumber: 50,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            children: [
-                                "Adopt ",
-                                name
-                            ]
-                        }, void 0, true, {
-                            fileName: "src/Details.js",
-                            lineNumber: 53,
-                            columnNumber: 11
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                            children: description
-                        }, void 0, false, {
-                            fileName: "src/Details.js",
-                            lineNumber: 54,
-                            columnNumber: 11
-                        }, this)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/Details.js",
-                    lineNumber: 48,
-                    columnNumber: 9
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/Details.js",
-            lineNumber: 46,
-            columnNumber: 12
-        }, this);
+        throw new Error("Self made Error");
     }
 }
 const WrappedDetails = ()=>{
     _s();
     const params = (0, _reactRouterDom.useParams)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Details, {
-        params: params
-    }, void 0, false, {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorBoundaryDefault.default), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Details, {
+                params: params
+            }, void 0, false, {
+                fileName: "src/Details.js",
+                lineNumber: 66,
+                columnNumber: 7
+            }, undefined),
+            ";"
+        ]
+    }, void 0, true, {
         fileName: "src/Details.js",
-        lineNumber: 63,
+        lineNumber: 65,
         columnNumber: 10
     }, undefined);
 };
@@ -26941,7 +26893,7 @@ $RefreshReg$(_c, "WrappedDetails");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./Carousel":"1lXBA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1lXBA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","./Carousel":"1lXBA","./ErrorBoundary":"dNDjy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1lXBA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9e23 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27026,6 +26978,82 @@ exports.default = Carousel;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequireaddb")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dNDjy":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c6cd = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c6cd.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactRouterDom = require("react-router-dom");
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+class ErrorBoundary extends (0, _react.Component) {
+    constructor(...args){
+        super(...args);
+        _defineProperty(this, "state", {
+            hasError: false,
+            redirect: false
+        });
+    }
+    static getDerivedStateFromError() {
+        return {
+            hasError: true
+        };
+    }
+    componentDidUpdate() {
+        if (this.state.error) return setTimeout(()=>this.setState({
+                redirect: true
+            }), 5000);
+    }
+    render() {
+        if (this.state.redirect) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Navigate), {
+            to: "/"
+        }, void 0, false, {
+            fileName: "src/ErrorBoundary.js",
+            lineNumber: 32,
+            columnNumber: 14
+        }, this);
+        else if (this.state.hasError) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+            children: [
+                "OHHH NOOOOO!!!!!!!! Error encountered.....",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/",
+                    children: "Click Here"
+                }, void 0, false, {
+                    fileName: "src/ErrorBoundary.js",
+                    lineNumber: 36,
+                    columnNumber: 11
+                }, this),
+                " to go back to homepage now. Page would automatically redirect in 5 sec..hehe"
+            ]
+        }, void 0, true, {
+            fileName: "src/ErrorBoundary.js",
+            lineNumber: 34,
+            columnNumber: 14
+        }, this);
+        return this.props.children;
+    }
+}
+exports.default = ErrorBoundary;
+
+  $parcel$ReactRefreshHelpers$c6cd.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"fdOAw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequireaddb")
 
 //# sourceMappingURL=index.7271efb6.js.map
