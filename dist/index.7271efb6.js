@@ -24992,6 +24992,7 @@ const Results = ({ pets  })=>{
                 name: pet.name,
                 animal: pet.animal,
                 breed: pet.breed,
+                description: pet.description,
                 images: pet.images,
                 id: pet.id
             }, pet.id, false, {
@@ -26806,37 +26807,119 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+/* import { useParams } from "react-router-dom";
+
+const Details = () => {
+  const { id } = useParams();
+  return <h1>how you Doinggg!!!!!! {id}</h1>;
+};
+
+export default Details;
+ */ var _react = require("react");
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
-const Details = ()=>{
+class Details extends (0, _react.Component) {
+    constructor(props){
+        super(props);
+        this.state = {
+            loading: true
+        };
+    }
+    async componentDidMount() {
+        const res = await fetch(`http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`);
+        const json = await res.json();
+        this.setState({
+            loading: false,
+            ...json.pets[0]
+        });
+    }
+    render() {
+        if (this.state.loading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            children: "Loading....."
+        }, void 0, false, {
+            fileName: "src/Details.js",
+            lineNumber: 31,
+            columnNumber: 14
+        }, this);
+        const { name , animal , breed , description  } = this.state;
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "details",
+            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/Details.js",
+                        lineNumber: 39,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: [
+                            animal,
+                            "-",
+                            breed
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Details.js",
+                        lineNumber: 40,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: [
+                            "Adopt ",
+                            name
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/Details.js",
+                        lineNumber: 43,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: description
+                    }, void 0, false, {
+                        fileName: "src/Details.js",
+                        lineNumber: 44,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/Details.js",
+                lineNumber: 38,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "src/Details.js",
+            lineNumber: 37,
+            columnNumber: 7
+        }, this);
+    }
+}
+const WrappedDetails = ()=>{
     _s();
-    const { id  } = (0, _reactRouterDom.useParams)();
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-        children: [
-            "how you Doinggg!!!!!! ",
-            id
-        ]
-    }, void 0, true, {
+    const params = (0, _reactRouterDom.useParams)();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Details, {
+        params: params
+    }, void 0, false, {
         fileName: "src/Details.js",
-        lineNumber: 5,
+        lineNumber: 53,
         columnNumber: 10
     }, undefined);
 };
-_s(Details, "yQgCIz/jJfqV1l9s2yoba81MT5A=", false, function() {
+_s(WrappedDetails, "+jVsTcECDRo3yq2d7EQxlN9Ixog=", false, function() {
     return [
         (0, _reactRouterDom.useParams)
     ];
 });
-_c = Details;
-exports.default = Details;
+_c = WrappedDetails;
+exports.default = WrappedDetails;
 var _c;
-$RefreshReg$(_c, "Details");
+$RefreshReg$(_c, "WrappedDetails");
 
   $parcel$ReactRefreshHelpers$0da2.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"fdOAw"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequireaddb")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-router-dom":"fdOAw"}]},["1xC6H","7Zeie","2kQhy"], "2kQhy", "parcelRequireaddb")
 
 //# sourceMappingURL=index.7271efb6.js.map
