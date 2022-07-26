@@ -33,7 +33,7 @@ class Details extends Component {
     if (this.state.loading) {
       return <h1>Loading.....</h1>;
     }
-    throw new Error("Self made Error");
+    //throw new Error("Self made Error");
     const { name, animal, breed, description, images } = this.state;
 
     return (
