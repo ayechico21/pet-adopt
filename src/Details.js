@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
+import Modal from "./Modal";
 
 class Details extends Component {
   /* constructor(props) {
@@ -20,7 +21,7 @@ class Details extends Component {
     this.state = { loading: true };
   } */
 
-  state = { loading: true };
+  state = { loading: true, showModal: false };
   async componentDidMount() {
     const res = await fetch(
       `http://pets-v2.dev-apis.com/pets?id=${this.props.params.id}`
@@ -29,12 +30,15 @@ class Details extends Component {
 
     this.setState({ loading: false, ...json.pets[0] });
   }
+
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
+
   render() {
     if (this.state.loading) {
       return <h1>Loading.....</h1>;
     }
     //throw new Error("Self made Error");
-    const { name, animal, breed, description, images } = this.state;
+    const { name, animal, breed, description, images, showModal } = this.state;
 
     return (
       <div className="details">
@@ -44,10 +48,24 @@ class Details extends Component {
           <h2>
             {animal}-{breed}
           </h2>
-          <button style={{ backgroundColor: this.props.theme }}>
+          <button
+            onClick={this.toggleModal}
+            style={{ backgroundColor: this.props.theme }}
+          >
             Adopt {name}
           </button>
           <p>{description}</p>
+          {showModal ? (
+            <Modal>
+              <div>
+                <h1>Would you like to adopt {name} ?</h1>
+                <div className="buttons">
+                  <a href="http://bit.ly/pet-adopt">Yes</a>
+                  <button onClick={this.toggleModal}>No</button>
+                </div>
+              </div>
+            </Modal>
+          ) : null}
         </div>
       </div>
     );
